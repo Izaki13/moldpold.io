@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moldpold Jewellery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Segoe UI", sans-serif; background-color: #fff5f5; color: #b65024; line-height: 1.6; }
+    header { background-color: #fff5f5; padding: 1em 2em; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .logO { font-size: 1.5em; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 1.5em; }
+    nav a { color: #000; text-decoration: none; transition: color 0.3s; }
+    nav a:hover { color: #b65024; }
+
+    /* HERO SECTION */
+    .hero { position: relative; height: 90vh; background: url(img/bg.jpg) no-repeat center/cover; display: flex; justify-content: center; align-items: center; text-align: center; padding: 2em; color: #fff; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(182,80,36,0.8) 0%, rgba(0,0,0,0.4) 100%); z-index: 0; animation: overlayFade 2s ease-in-out; }
+    .hero-content { position: relative; z-index: 1; animation: fadeInUp 1.5s ease-out; }
+    .hero h1 { font-size: 3.5em; margin-bottom: 0.5em; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+    .hero p { font-size: 1.25em; margin-bottom: 1em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+    .btn { background-color: #b65024; color: #ffe2e2; padding: 0.75em 1.75em; border: none; border-radius: 2em; font-size: 1em; text-decoration: none; transition: transform 0.3s, background-color 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer; }
+    .btn:hover { background-color: #fff; color: #b65024; transform: scale(1.05); }
+
+    /* PRODUK SECTION */
+    .produk { padding: 4em 2em; text-align: center; background-color: #fff; }
+    .produk h2 { font-size: 2em; margin-bottom: 1em; }
+    .produk-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2em; }
+    .produk-item { background: #fff; border-radius: 1em; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 1em; animation: fadeIn 1s ease-in-out; }
+    .produk-item img { width: 100%; height: auto; border-radius: 0.75em; margin-bottom: 0.75em; }
+    .produk-item h3 { font-size: 1.25em; margin-bottom: 0.5em; }
+    .produk-item p { font-size: 1em; font-weight: bold; }
+
+    /* TENTANG KAMI SECTION */
+    .tentang { padding: 4em 2em; background-color: #ffe2e2; text-align: center; }
+    .tentang h2 { font-size: 2em; margin-bottom: 1em; }
+    .tentang p { max-width: 800px; margin: 0 auto 1.5em; font-size: 1.1em; color: #333; }
+
+    /* KONTAK KAMI SECTION */
+    .kontak { padding: 4em 2em; background-color: #fff; text-align: center; }
+    .kontak h2 { font-size: 2em; margin-bottom: 1em; }
+    .kontak-form { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; gap: 1em; }
+    .kontak-form input,
+    .kontak-form textarea { padding: 0.75em; border: 1px solid #ccc; border-radius: 0.5em; font-size: 1em; }
+
+    /* SOCIAL SECTION */
+    .social { padding: 2em; background-color: #fff5f5; text-align: center; }
+    .social h2 { font-size: 1.75em; margin-bottom: 0.75em; }
+    .social-icons { display: flex; justify-content: center; gap: 1.5em; }
+    .social-icons a img { width: 40px; height: 40px; transition: transform 0.3s; }
+    .social-icons a img:hover { transform: scale(1.1); }
+
+    /* FOOTER */
+    footer { background-color: #fff5f5; padding: 1em 2em; text-align: center; font-size: 0.9em; color: #666; }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes overlayFade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logO">⋆. 𐙚 ˚ Moldpold Jewellery ⊹ ࣪ ˖</div>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#produk">Product</a></li>
+        <li><a href="#tentang">About Us</a></li>
+        <li><a href="#kontak">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Weave Your Shine with Our Collection!</h1>
+      <p>Get Your Jewellery Now !</p>
+      <a href="#produk" class="btn">Lihat Produk</a>
+    </div>
+  </section>
+
+  <section id="produk" class="produk">
+    <h2>Best Seller Product</h2>
+    <div class="produk-container">
+      <div class="produk-item">
+        <img src="img/A.4.jpg" alt="Glimmer Tear Earrings">
+        <h3>Glimmer Tear Earrings</h3>
+        <p>Rp 150.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/K.2.jpg" alt="Pearl Glow Necklace">
+        <h3>Pearl Glow Necklace</h3>
+        <p>Rp 155.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/C.1.jpg" alt="Golden Heart Ring">
+        <h3>Golden Heart Ring</h3>
+        <p>Rp 100.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/G.3.jpg" alt="Lustrous Link Bracelet">
+        <h3>Lustrous Link Bracelet</h3>
+        <p>Rp 200.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="produk" class="produk">
+    <h2>Other Product</h2>
+    <div class="produk-container">
+      <div class="produk-item">
+        <img src="img/G.6.jpg" alt="Marée Belle">
+        <h3>Marée Belle</h3>
+        <p>Rp 150.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/K.3.jpg" alt="Obsidian Charm Necklace">
+        <h3>Obsidian Charm Necklace</h3>
+        <p>Rp 150.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/G.2.jpg" alt="Twinkle Star Bracelet">
+        <h3>Twinkle Star Bracelet</h3>
+        <p>Rp 100.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/A.6.jpg" alt="Golden Bow Studs">
+        <h3>Golden Bow Studs</h3>
+        <p>Rp 89.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="produk" class="produk">
+    <div class="produk-container">
+      <div class="produk-item">
+        <img src="img/G.4.jpg" alt="Braided Shine Bracelet">
+        <h3>Braided Shine Bracelet</h3>
+        <p>Rp 177.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/K.7.jpg" alt="Golden Love Pendant">
+        <h3>Golden Love Pendant</h3>
+        <p>Rp 250.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/C.2.jpg" alt="Mini Bow Ring">
+        <h3>Mini Bow Ring</h3>
+        <p>Rp 75.000</p>
+      </div>
+      <div class="produk-item">
+        <img src="img/A.5.jpg" alt="Celestial Pearl Earrings">
+        <h3>Celestial Pearl Earrings</h3>
+        <p>Rp 120.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang" class="tentang">
+    <h2>About Us</h2>
+    <p>Selamat datang di moldpold jewellery, sebuah toko aksesoris local yang berasal dari indonesia. Setiap karya dibuat dengan tangan oleh pengrajin berpengalaman, menggunakan bahan berkualitas tinggi dan detail yang teliti. Visi kami adalah membawa keindahan karya seni ini ke seluruh penjuru dunia dan menambah kilau pada setiap penampilan.</p>
+    <p>Kami berkomitmen pada keberlanjutan dan kualitas, memilih sumber bahan secara etis dan mendukung kesejahteraan komunitas pengrajin lokal.</p>
+  </section>
+
+  <section id="kontak" class="kontak">
+    <h2>Contact Us</h2>
+    <form class="kontak-form" action="mailto:erlinasw2@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nama" placeholder="Nama Anda" required>
+      <input type="email" name="Email" placeholder="Email Anda" required>
+      <textarea name="Pesan" placeholder="Pesan Anda" rows="5" required></textarea>
+      <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Moldpold Jewellery. All rights reserved.
+  </footer>
+</body>
+</html>
